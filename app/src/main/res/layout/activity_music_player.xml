@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MusicPlayerActivity"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/song_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:ellipsize="marquee"
+        android:padding="@dimen/_20sdp"
+        android:singleLine="true"
+        android:text="song name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp" />
+
+
+    <ImageView
+        android:id="@+id/music_icon"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/_20sdp"
+        android:layout_above="@id/controls"
+        android:src="@drawable/image1"/>
+    
+    <RelativeLayout
+        android:id="@+id/controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/_10sdp">
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:thumb="@drawable/thumb"
+            android:progressBackgroundTint="#377FEB"
+            android:progressTint="#377FEB"
+            android:backgroundTint="#377FEB" />
+
+
+        <TextView
+            android:id="@+id/current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seekBar"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:text="0.00"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:layout_below="@id/seekBar"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/_20sdp"/>
+            
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/total_time"
+            android:padding="@dimen/_30sdp">
+            
+            <ImageView
+                android:id="@+id/imgprevious"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/forward_button"
+                android:layout_alignParentStart="true"/>
+
+            <ImageView
+                android:id="@+id/imgnext"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/next"
+                android:layout_alignParentEnd="true"/>
+
+            <ImageView
+                android:id="@+id/imgPlayPause"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/pause" />
+        </RelativeLayout>
+    </RelativeLayout>
+        
+</RelativeLayout>
